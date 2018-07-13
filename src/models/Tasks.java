@@ -13,10 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @NamedQueries({
-    @NamedQuery(
-            name = "getAllTasks",
-            query = "SELECT m FROM Tasks AS m ORDER BY m.id DESC"
-            )
+        @NamedQuery(name = "getAllTasks", query = "SELECT m FROM Tasks AS m ORDER BY m.id DESC")
 })
 @Table(name = "tasks")
 public class Tasks {
@@ -25,7 +22,7 @@ public class Tasks {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "contnt", length = 255, nullable = false)
+    @Column(name = "content", length = 255, nullable = false)
     private String content;
 
     @Column(name = "deadline", length = 255, nullable = false)
@@ -58,7 +55,7 @@ public class Tasks {
     }
 
     public void setDeadline(String deadline) {
-        this.content = deadline;
+        this.deadline = deadline;
     }
 
     public Timestamp getCreated_at() {
