@@ -4,7 +4,7 @@
 <br /><br />
 
 <label for="deadline">締め切り</label><br />
-<input type="text" name="deadlinet" value="${tasks.deadline}" />
+<input type="text" name="deadline" value="${tasks.deadline}" />
 <br /><br />
 
 <input type="hidden" name="_token" value="${_token}" />
